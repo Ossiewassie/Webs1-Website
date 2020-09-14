@@ -5,11 +5,15 @@ JK xd
 # Takenverdeling
 
 ## Oscar
-: cool
+*is cool*
 - [ ] Menu 
 - [ ] Home Page
+- [ ] Footer
+- [ ] Interactieve page (wildcard, beetje leuk (niet te veel leuk))
 
 ## Roel
-: stom
+*is stom*
 - [ ] About page
-- [ ] Formulier
+- [ ] Formulier/Contact
+- [ ] Grid/Skelet
+- [ ] Interactieve page
