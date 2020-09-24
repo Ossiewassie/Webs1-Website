@@ -197,30 +197,54 @@ nav {
   align-items: center;
   justify-content: flex-start;
   flex-direction: row;
+  height: 50px;
 }
-.menu{
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: row;
-  
-  padding-inline-start: 0;
+
+nav ul {
+	padding: 0;
   margin: 0;
-  list-style-type: none;
-}
-.menu-item{
+	list-style: none;
+  position: relative;
+  height: 100%;
+	}
+	
+nav ul li {
+  display:inline-block;
+  cursor: pointer;
   height: 100%;
 }
-.menu-item a {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+
+nav a {
+	display:block;
+	color:#FFF;
+	font-size:20px;
+  text-decoration:none;
+  height: 100%;
+  Width: 100%;
+  padding: 12px;
 }
-.menu-item:hover{
-  background-color: rgba(0, 0, 0, 0.096);
+nav ul ul {
+	display: none;
+	position: absolute; 
 }
+nav ul li:hover{
+  background-color: #d49bac;
+}
+nav ul li:hover > ul {
+	display:inherit;
+}
+	
+nav ul ul li {
+	width:170px;
+	float:none;
+	display:list-item;
+  position: relative;
+  background-color: #c06c84;
+}	
+nav ul ul li:hover {
+  background-color: #d49bac;
+}
+
 main {
   background-color: #8a65ac;
   grid-area: main;
@@ -323,21 +347,7 @@ footer a:hover {
 
 /* MEDIA QUERIES */
 
-@media only screen and (max-width: 992px) {
-  .homepage {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:
-      "nav nav nav"
-      "header header header"
-      "aside main main"
-      "aside main main"
-      "aside section1 section1"
-      "aside section2 section2"
-      "aside section3 section3"
-      "footer footer footer";
-  }
-}
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 640px) {
   .homepage {
     grid-template-columns: 1fr;
     grid-template-areas:
