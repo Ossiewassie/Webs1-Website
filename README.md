@@ -1,19 +1,24 @@
-Hey Roel doe ff de rest pls 
+Hey Roel doe ff de rest pls
 JK xd
+
 ---
 
 # Takenverdeling
 
 ## Oscar
-*is cool*
-- [ ] Menu 
+
+_is cool_
+
+- [ ] Menu
 - [ ] Home Page
-- [ ] Footer
+- [ ] About page
 - [ ] Interactieve page (wildcard, beetje leuk (niet te veel leuk))
 
 ## Roel
-*is stom*
-- [ ] About page
+
+_is stom_
+
 - [ ] Formulier/Contact
 - [ ] Grid/Skelet
+- [x] Footer
 - [ ] Interactieve page
