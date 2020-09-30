@@ -158,16 +158,31 @@
   text-align: center !important;
 }
 
-/* HOMEPAGE */
-
 body {
   font-family: lato, sans-serif;
 }
 
+.container {
+  display: flex;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  flex-wrap: row;
+}
+.col {
+  margin: 15px 15px;
+  position: relative;
+  width: 100%;
+}
+
+/* HOMEPAGE */
+
 .homepage {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 50px 280px 350px 250px 300px 250px;
+  grid-template-rows: 50px 280px 350px 250px 250px auto;
   grid-template-areas:
     "nav nav nav nav"
     "header header header header"
@@ -176,9 +191,12 @@ body {
     "aside section1 section2 section3"
     "footer footer footer footer";
 }
+
+/* ABOUT PAGE */
 .about {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 50px 280px minmax(100%, auto) auto;
   grid-template-areas:
     "nav nav nav nav"
     "header header header header"
@@ -200,6 +218,30 @@ header {
   flex-direction: column;
   min-height: 20vh;
 }
+
+header > h1 {
+  position: relative;
+}
+
+.title-foreground {
+  position: relative;
+  text-transform: uppercase;
+  top: 0;
+  color: var(--light);
+  text-shadow: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.title-background {
+  position: absolute;
+  text-transform: uppercase;
+  top: 0;
+  color: var(--red);
+  text-shadow: none;
+  -webkit-text-stroke-width: 7px;
+  transform: rotate(-1deg) scale(1.03);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 nav {
   background-color: #c06c84;
   grid-area: nav;
@@ -256,45 +298,101 @@ nav ul ul li:hover {
 }
 
 main {
-  background-color: #8a65ac;
+  background-color: var(--light);
   grid-area: main;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   grid-template-rows: 3fr;
 }
 aside {
   background-color: #355c7d;
   grid-area: aside;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
 .section-1 {
   background-color: #732cb1;
   grid-area: section1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
 .section-2 {
   background-color: #440c75;
   grid-area: section2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
 .section-3 {
   background-color: #230042;
   grid-area: section3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+}
+
+/* CONTACT PAGINA */
+.contact {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 50px 280px auto auto;
+  grid-template-areas:
+    "nav nav nav nav"
+    "header header header header"
+    "main main main main"
+    "footer footer footer footer";
+}
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea,
+#contact button[type="submit"] {
+  font: 400 12px/16px "lato";
+}
+
+#contact h3 {
+  color: #f96;
+  display: block;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+#contact h4 {
+  margin: 5px 0 15px;
+  display: block;
+  font-size: 13px;
+}
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #fff;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+#contact textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+#contact button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: var(--red);
+  color: #fff;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#map {
+  width: 100%;
+  min-height: 50%;
+  height: 100%;
 }
 
 /* FOOTER  */
@@ -361,6 +459,7 @@ footer a:hover {
 @media only screen and (max-width: 640px) {
   .homepage {
     grid-template-columns: 1fr;
+    grid-template-rows: 50px 280px minmax(350px, auto) 250px 1fr 1fr 1fr auto;
     grid-template-areas:
       "nav"
       "header"
@@ -369,6 +468,22 @@ footer a:hover {
       "section1"
       "section2"
       "section3"
+      "footer";
+  }
+  .about {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "nav"
+      "header"
+      "main"
+      "footer";
+  }
+  .contact {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "nav"
+      "header"
+      "main"
       "footer";
   }
 }
