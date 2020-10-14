@@ -323,13 +323,17 @@ aside {
 .contact {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 50px 280px auto auto;
+  grid-template-rows: 50px 367px auto auto;
   grid-template-areas:
     "nav nav nav nav"
     "header header header header"
     "main main main main"
     "footer footer footer footer";
 }
+#contact {
+  padding: 0px 25px;
+}
+
 #contact input[type="text"],
 #contact input[type="email"],
 #contact input[type="tel"],
@@ -485,5 +489,8 @@ footer a:hover {
       "header"
       "main"
       "footer";
+  }
+  .col {
+    width: 100%;
   }
 }
