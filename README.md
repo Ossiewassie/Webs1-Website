@@ -18,7 +18,7 @@ _is cool_
 
 _is stom_
 
-- [ ] Formulier/Contact
+- [x] Formulier/Contact
 - [ ] Grid/Skelet
 - [x] Footer
-- [ ] Interactieve page
+- [x] Interactieve page

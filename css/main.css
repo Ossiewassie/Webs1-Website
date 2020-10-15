@@ -169,12 +169,13 @@ body {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  flex-wrap: row;
+  flex-wrap: wrap;
 }
 .col {
-  margin: 15px 15px;
+  margin: 15px auto;
   position: relative;
-  width: 100%;
+  width: 50%;
+  padding: 0px 25px;
 }
 
 /* HOMEPAGE */
@@ -185,7 +186,7 @@ body {
   grid-template-rows: 50px 280px 350px 250px 250px auto;
   grid-template-areas:
     "nav nav nav nav"
-    "header header header header"
+    "figure figure figure figure"
     "aside main main main"
     "aside main main main"
     "aside section1 section2 section3"
@@ -199,27 +200,27 @@ body {
   grid-template-rows: 50px 280px minmax(100%, auto) auto;
   grid-template-areas:
     "nav nav nav nav"
-    "header header header header"
+    "figure figure figure figure"
     "main main main main"
     "footer footer footer footer";
 }
 
-header {
-  background-image: url(../media/dojapoes_banner.png);
+figure {
+  background-image: url(../media/img/dojapoes_banner.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: center;
   background-position-x: center;
-  filter: sepia(0.2);
-  grid-area: header;
+  grid-area: figure;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   min-height: 20vh;
+  margin: 0;
 }
 
-header > h1 {
+figure > h1 {
   position: relative;
 }
 
@@ -326,12 +327,9 @@ aside {
   grid-template-rows: 50px 367px auto auto;
   grid-template-areas:
     "nav nav nav nav"
-    "header header header header"
+    "figure figure figure figure"
     "main main main main"
     "footer footer footer footer";
-}
-#contact {
-  padding: 0px 25px;
 }
 
 #contact input[type="text"],
@@ -399,6 +397,64 @@ fieldset {
   height: 100%;
 }
 
+/* Music */
+.songs {
+  margin: 20px 50px;
+}
+.audio-container {
+  width: 100%;
+  background-color: rgb(211, 211, 211);
+  min-height: 200px;
+  display: flex;
+  align-items: flex-start;
+  padding: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  transition: 0.3s;
+}
+.audio-container:first-child {
+  border-radius: 12.5px 12.5px 0px 0px;
+}
+.audio-container:last-child {
+  border-radius: 0px 0px 12.5px 12.5px;
+}
+.audio-container:nth-child(even) {
+  background-color: rgb(190, 190, 190);
+}
+.audio-container:hover {
+  background-color: rgb(180, 180, 180);
+}
+audio {
+  margin-top: 10px;
+  width: 100%;
+  background-color: rgb(160, 160, 160);
+  border-radius: 8.5px;
+}
+audio::-webkit-media-controls-panel {
+  background-color: rgb(160, 160, 160);
+}
+
+audio:focus {
+  outline: none;
+}
+
+.album-cover {
+  height: 200px;
+  width: 200px;
+}
+
+.album-cover img {
+  width: 100%;
+  border: rgba(0, 0, 0, 0.3) 1px solid;
+}
+.song-info {
+  margin-left: 10px;
+}
+.song-info h1,
+.song-info h3 {
+  margin: 0;
+}
+
 /* FOOTER  */
 
 footer {
@@ -414,10 +470,8 @@ footer {
   flex-wrap: wrap;
 }
 .column {
-  margin: 0px 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 .column-title {
   text-transform: capitalize;
@@ -466,7 +520,7 @@ footer a:hover {
     grid-template-rows: 50px 280px minmax(350px, auto) 250px 1fr 1fr 1fr auto;
     grid-template-areas:
       "nav"
-      "header"
+      "figure"
       "main"
       "aside"
       "section1"
@@ -478,7 +532,7 @@ footer a:hover {
     grid-template-columns: 1fr;
     grid-template-areas:
       "nav"
-      "header"
+      "figure"
       "main"
       "footer";
   }
@@ -486,11 +540,15 @@ footer a:hover {
     grid-template-columns: 1fr;
     grid-template-areas:
       "nav"
-      "header"
+      "figure"
       "main"
       "footer";
   }
+  .songs {
+    margin: 0px;
+  }
   .col {
     width: 100%;
+    padding: 0px 5px;
   }
 }

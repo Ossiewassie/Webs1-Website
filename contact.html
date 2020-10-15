@@ -15,56 +15,38 @@
         <li>
           <a>Interactief</a>
           <ul>
-            <li><a href="#">interactief 1</a></li>
+            <li><a href="music.html">Music</a></li>
             <li><a href="#">interactief 2</a></li>
           </ul>
         </li>
         <li class="menu-item"><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <header>
+    <figure>
       <h1 class="news-platform-title" style="position: relative">
         <span class="title-background">Contact</span>
         <span class="title-foreground">Contact</span>
       </h1>
-    </header>
+    </figure>
     <main>
       <div class="container">
         <div class="col">
+          <h3>Contact Form</h3>
           <form id="contact" method="post">
             <fieldset>
-              <input
-                placeholder="Your name"
-                type="text"
-                tabindex="1"
-                required
-                autofocus
-              />
+              <label for="name">Naam</label>
+              <input id="name" type="text" tabindex="1" required autofocus />
             </fieldset>
             <fieldset>
-              <input
-                placeholder="Your Email Address"
-                type="email"
-                tabindex="2"
-                required
-              />
+              <label for="email">E-mail</label>
+              <input id="email" type="email" tabindex="2" required />
             </fieldset>
             <fieldset>
-              <textarea
-                placeholder="Type your Message Here...."
-                tabindex="5"
-                required
-              ></textarea>
+              <label for="message">Bericht</label>
+              <textarea id="message" tabindex="5" required></textarea>
             </fieldset>
             <fieldset>
-              <button
-                name="submit"
-                type="submit"
-                id="contact-submit"
-                data-submit="...Sending"
-              >
-                Submit
-              </button>
+              <button name="submit" type="submit">Verstuur</button>
             </fieldset>
           </form>
         </div>
@@ -84,18 +66,18 @@
       <div class="column">
         <span class="column-title">menu</span>
         <div class="footer-link">
-          <a href="#">
+          <a href="index.html">
             <span class="footer-link-text">Home</span>
           </a>
         </div>
         <div class="footer-link">
-          <a href="#">
+          <a href="about.html">
             <span class="footer-link-text">About</span>
           </a>
         </div>
         <div class="footer-link">
-          <a href="#">
-            <span class="footer-link-text">Pagina 1</span>
+          <a href="music.html">
+            <span class="footer-link-text">Music</span>
           </a>
         </div>
         <div class="footer-link">
@@ -104,7 +86,7 @@
           </a>
         </div>
         <div class="footer-link">
-          <a href="#">
+          <a href="contact.html">
             <span class="footer-link-text">Contact</span>
           </a>
         </div>
