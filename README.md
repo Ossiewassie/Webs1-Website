@@ -9,7 +9,7 @@ JK xd
 
 _is cool_
 
-- [ ] Menu
+- [x] Menu
 - [ ] Home Page
 - [ ] About page
 - [ ] Interactieve page (wildcard, beetje leuk (niet te veel leuk))
