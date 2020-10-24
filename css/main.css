@@ -555,6 +555,15 @@ footer a:hover {
       "main"
       "footer";
   }
+  .music {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "nav"
+      "figure"
+      "main"
+      "footer";
+  }
   .contact {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
