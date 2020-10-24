@@ -147,6 +147,8 @@
   --red: #db504a;
   --yellow: #f8c462;
   --green: #aada81;
+  height: 100%;
+  min-height: 100vh;
 }
 
 * {
@@ -160,6 +162,7 @@
 
 body {
   font-family: lato, sans-serif;
+  height: 100%;
 }
 
 .container {
@@ -182,14 +185,15 @@ body {
 nav {
   background-color: #c06c84;
   grid-area: nav;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: row;
   height: 50px;
+  z-index: 10000;
+
 }
 
 nav ul {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -198,7 +202,7 @@ nav ul {
 }
 
 nav ul li {
-  display: inline-block;
+  display: block;
   cursor: pointer;
   height: 100%;
 }
@@ -225,7 +229,6 @@ nav ul li:hover > ul {
 
 nav ul ul li {
   width: 170px;
-  float: none;
   display: list-item;
   position: relative;
   background-color: #c06c84;
@@ -253,7 +256,19 @@ nav ul ul li:hover {
 .about {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 50px 280px minmax(100%, auto) auto;
+  grid-template-rows: 50px 280px 1fr auto;
+  grid-template-areas:
+    "nav nav nav nav"
+    "figure figure figure figure"
+    "main main main main"
+    "footer footer footer footer";
+}
+
+/* MUSIC PAGE */
+.music {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 50px 280px 1fr auto;
   grid-template-areas:
     "nav nav nav nav"
     "figure figure figure figure"
@@ -303,29 +318,34 @@ main {
   background-color: var(--light);
   grid-area: main;
   grid-template-rows: 3fr;
+  padding: 20px;
 }
 aside {
   background-color: #355c7d;
   grid-area: aside;
+  padding: 20px;
 }
 .section-1 {
   background-color: #732cb1;
   grid-area: section1;
+  padding: 20px;
 }
 .section-2 {
   background-color: #440c75;
   grid-area: section2;
+  padding: 20px;
 }
 .section-3 {
   background-color: #230042;
   grid-area: section3;
+  padding: 20px;
 }
 
 /* CONTACT PAGINA */
 .contact {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 50px 367px auto auto;
+  grid-template-rows: 50px 367px 1fr auto;
   grid-template-areas:
     "nav nav nav nav"
     "figure figure figure figure"
@@ -518,7 +538,7 @@ footer a:hover {
 @media only screen and (max-width: 640px) {
   .homepage {
     grid-template-columns: 1fr;
-    grid-template-rows: 50px 280px minmax(350px, auto) 250px 1fr 1fr 1fr auto;
+    grid-template-rows: auto;
     grid-template-areas:
       "nav"
       "figure"
@@ -531,6 +551,16 @@ footer a:hover {
   }
   .about {
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "nav"
+      "figure"
+      "main"
+      "footer";
+  }
+  .music {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
     grid-template-areas:
       "nav"
       "figure"
@@ -539,12 +569,73 @@ footer a:hover {
   }
   .contact {
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
     grid-template-areas:
       "nav"
       "figure"
       "main"
       "footer";
   }
+
+  nav {
+    background-color: #c06c84;
+    grid-area: nav;
+    height: fit-content;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    /* height: 100%; */
+  }
+  
+  nav ul li {
+    display: block;
+    cursor: pointer;
+    height: auto;
+  }
+  
+  nav a {
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    /* height: 100%; */
+    width: 100%;
+    padding: 12px;
+  }
+  nav ul ul {
+    display: block;
+    position: relative;
+  }
+  .interactief {
+    display:none;
+  }
+  .li-interactief:hover {
+    background-color:transparent;
+  }
+  nav ul li:hover {
+    background-color: #d49bac;
+  }
+  nav ul li:hover > ul {
+    display: block;
+  }
+  
+  nav ul ul li {
+    width: auto;
+    display: list-item;
+    position: relative;
+    background-color: transparent;
+  }
+  nav ul ul li:hover {
+    background-color: #d49bac;
+  }
+
   .songs {
     margin: 0px;
   }
