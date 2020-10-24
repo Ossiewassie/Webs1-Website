@@ -552,6 +552,7 @@ footer a:hover {
   nav {
     background-color: #c06c84;
     grid-area: nav;
+    height: fit-content;
   }
   
   nav ul {
@@ -587,6 +588,9 @@ footer a:hover {
   .interactief {
     display:none;
   }
+  .li-interactief:hover {
+    background-color:transparent;
+  }
   nav ul li:hover {
     background-color: #d49bac;
   }
@@ -595,7 +599,7 @@ footer a:hover {
   }
   
   nav ul ul li {
-    width: 170px;
+    width: auto;
     display: list-item;
     position: relative;
     background-color: transparent;
