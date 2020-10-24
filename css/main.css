@@ -147,6 +147,8 @@
   --red: #db504a;
   --yellow: #f8c462;
   --green: #aada81;
+  height: 100%;
+  min-height: 100vh;
 }
 
 * {
@@ -160,6 +162,7 @@
 
 body {
   font-family: lato, sans-serif;
+  height: 100%;
 }
 
 .container {
@@ -253,7 +256,7 @@ nav ul ul li:hover {
 .about {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 50px 280px minmax(100%, auto) auto;
+  grid-template-rows: 50px 280px 1fr auto;
   grid-template-areas:
     "nav nav nav nav"
     "figure figure figure figure"
@@ -265,7 +268,7 @@ nav ul ul li:hover {
 .music {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 50px 280px auto auto;
+  grid-template-rows: 50px 280px 1fr auto;
   grid-template-areas:
     "nav nav nav nav"
     "figure figure figure figure"
@@ -342,7 +345,7 @@ aside {
 .contact {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 50px 367px auto auto;
+  grid-template-rows: 50px 367px 1fr auto;
   grid-template-areas:
     "nav nav nav nav"
     "figure figure figure figure"
