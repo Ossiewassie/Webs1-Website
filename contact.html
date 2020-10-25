@@ -38,12 +38,24 @@
               <input id="name" type="text" tabindex="1" required autofocus />
             </fieldset>
             <fieldset>
+              <input type="radio" id="male" name="gender" value="male">
+              <label for="male">Male</label>
+              <input type="radio" id="female" name="gender" value="female">
+              <label for="female">Female</label>
+              <input type="radio" id="other" name="gender" value="other">
+              <label for="other">Other</label>
+            </fieldset>
+            <fieldset>
               <label for="email">E-mail</label>
               <input id="email" type="email" tabindex="2" required />
             </fieldset>
             <fieldset>
               <label for="message">Bericht</label>
               <textarea id="message" tabindex="5" required></textarea>
+            </fieldset>
+            <fieldset>
+              <input type="checkbox" id="scales" name="scales" checked>
+              <label for="scales">Wil je de Dojapoes-nieuwsbrief ontvangen?</label>
             </fieldset>
             <fieldset>
               <button name="submit" type="submit">Verstuur</button>
