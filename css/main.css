@@ -242,7 +242,7 @@ nav ul ul li:hover {
 .homepage {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 50px 280px 350px 250px 250px auto;
+  grid-template-rows: 50px 280px auto auto 1fr auto;
   grid-template-areas:
     "nav nav nav nav"
     "figure figure figure figure"
@@ -319,26 +319,32 @@ main {
   grid-area: main;
   grid-template-rows: 3fr;
   padding: 20px;
+  background-color: #ffa8d4;
+  font-size: 20px;
 }
 aside {
-  background-color: #355c7d;
+  background-color: #ff86c3;
   grid-area: aside;
   padding: 20px;
+  font-size: 20px;
 }
 .section-1 {
-  background-color: #732cb1;
+  background-color: #8040b8;
   grid-area: section1;
   padding: 20px;
+  font-size: 20px;
 }
 .section-2 {
-  background-color: #440c75;
+  background-color: #6d2fa2;
   grid-area: section2;
   padding: 20px;
+  font-size: 20px;
 }
 .section-3 {
-  background-color: #230042;
+  background-color: #571e89;
   grid-area: section3;
   padding: 20px;
+  font-size: 20px;
 }
 
 /* CONTACT PAGINA */
@@ -538,7 +544,7 @@ footer a:hover {
 @media only screen and (max-width: 640px) {
   .homepage {
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: auto auto auto 1fr auto auto auto auto;
     grid-template-areas:
       "nav"
       "figure"
@@ -551,7 +557,7 @@ footer a:hover {
   }
   .about {
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: auto auto 1fr auto;
     grid-template-areas:
       "nav"
       "figure"
@@ -560,7 +566,7 @@ footer a:hover {
   }
   .music {
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: auto auto 1fr auto;
     grid-template-areas:
       "nav"
       "figure"
@@ -569,7 +575,7 @@ footer a:hover {
   }
   .contact {
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: auto auto 1fr auto;
     grid-template-areas:
       "nav"
       "figure"
@@ -634,6 +640,22 @@ footer a:hover {
   }
   nav ul ul li:hover {
     background-color: #d49bac;
+  }
+
+  main {
+    font-size: 16px;
+  }
+  aside {
+    font-size: 16px;
+  }
+  .section-1 {
+    font-size: 16px;
+  }
+  .section-2 {
+    font-size: 16px;
+  }
+  .section-3 {
+    font-size: 16px;
   }
 
   .songs {
