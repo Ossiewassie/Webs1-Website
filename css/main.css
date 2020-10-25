@@ -255,13 +255,29 @@ nav ul ul li:hover {
 /* ABOUT PAGE */
 .about {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 50px 280px 1fr auto;
   grid-template-areas:
-    "nav nav nav nav"
-    "figure figure figure figure"
-    "main main main main"
-    "footer footer footer footer";
+    "nav nav nav"
+    "figure figure figure"
+    "aside main main "
+    "footer footer footer";
+}
+
+.about aside {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-image {
+  height: 300px;
+  width: 300px;
+}
+
+.contact-image img {
+  width: 100%;
+  border: rgba(0, 0, 0, 0.3) 1px solid;
 }
 
 /* MUSIC PAGE */
@@ -274,6 +290,19 @@ nav ul ul li:hover {
     "figure figure figure figure"
     "main main main main"
     "footer footer footer footer";
+}
+
+/* DOJA-WAVER PAGE */
+
+.waver {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 50px 280px 1fr auto;
+  grid-template-areas:
+    "nav"
+    "figure"
+    "main"
+    "footer";
 }
 
 figure {
@@ -561,6 +590,7 @@ footer a:hover {
     grid-template-areas:
       "nav"
       "figure"
+      "aside"
       "main"
       "footer";
   }
