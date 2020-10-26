@@ -305,6 +305,31 @@ nav ul ul li:hover {
     "footer";
 }
 
+.waver main {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.doja-waver {
+  width: 80%;
+  
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.doja-waver img {
+  width: 12vw;
+  transition: transform 1s;
+  position: relative;
+}
+
+.doja-waver img:hover{
+  position: relative;
+  transform: translate(0px, -100px);
+}
+
 figure {
   background-image: url(../media/img/dojapoes_banner.png);
   background-repeat: no-repeat;
@@ -567,6 +592,7 @@ footer a:hover {
   color: var(--blue);
   transition: 300ms;
 }
+
 
 /* MEDIA QUERIES */
 
